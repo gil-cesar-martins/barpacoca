@@ -1,0 +1,53 @@
+{% load static %}
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2><span>Entre em </span>contato</h2>
+      <p>Será um prazer receber você,seus amigos e familiares. Venha e traga-os para tomar umas, ficar à vontade e aproveitar bons momentos!</p>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="info-wrap">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 info">
+          <i class="bi bi-geo-alt"></i>
+          <h4>Localização:</h4>
+          <p>Rua 14 BIS, 215<br>Belo Horizonte, MG 535022</p>
+        </div>
+        <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+          <i class="bi bi-clock"></i>
+          <h4>Funcionamento:</h4>
+          <p>Terça-Domingo:<br>10:00 - 23:30</p>
+        </div>
+        <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+          <i class="bi bi-envelope"></i>
+          <h4>Email:</h4>
+          <p>pacoca@reservas.com<br>pacoca@eventos.com</p>
+        </div>
+        <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+          <i class="bi bi-phone"></i>
+          <h4>Fone:</h4>
+          <p>+55 31 997836206<br>+55 31 9123456789</p>
+        </div>
+      </div>
+    </div>
+    <form id="contato" method="post" action="{% url 'index' %}" autocomplete="off">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-md-6 form-group">
+          <input type="text" name="nome" class="form-control" id="nome" placeholder="Seu Nome" required>
+        </div>
+        <div class="col-md-6 form-group mt-3 mt-md-0">
+          <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email" required>
+        </div>
+      </div>
+      <div class="form-group mt-3">
+        <input type="text" class="form-control" name="assunto" id="assunto" placeholder="Assunto" required>
+      </div>
+      <div class="form-group mt-3">
+        <textarea class="form-control" name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
+      </div>
+      <div class="text-center"><button  type="submit">Enviar e-mail</button></div>
+    </form>
+  </div>
+</section>

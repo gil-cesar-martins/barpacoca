@@ -1,0 +1,30 @@
+{% load static %}
+<section id="chefs" class="chefs">
+<div class="container">
+  <div class="section-title">
+    <h2>Nossos queridos <span>Chefs</span></h2>
+    <p>Vai me dizer que você achava que era o Seu Paçoca que cozinhava... Ele não frita nem um ovo! Deixaremos a cozinha para quem entende! Conheça nossos excelentes profissionais.</p>
+  </div>
+  <div class="row">
+
+    {% for c in chefs %}
+    <div class="col-lg-4 col-md-6">
+      <div class="member">
+        <div class="pic"><img src="{{ c.imagem.thumb.url }}" class="img-fluid" alt="{{c.nome}}"></div>
+        <div class="member-info">
+          <h4>{{c.nome}}</h4>
+          <span>{{c.cargo}}</span>
+          <div class="social">
+            <a href="{{c.twitter}}" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="{{c.facebook}}"><i class="bi bi-facebook"></i></a>
+            <a href="{{c.instagram}}"><i class="bi bi-instagram"></i></a>
+            <a href="{{c.linkedin}}" target="_blank"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    
+  </div>
+</div>
+</section>

@@ -1,0 +1,97 @@
+{% load static %}
+<section id="testimonials" class="testimonials">
+<div class="container position-relative">
+  <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="testimonial-item">
+          <img src="{% static 'img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+          <h3>Rubens Aranha</h3>
+          <h4>Maceió-AL</h4>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Me emocionei quando vi um garoto de 14 anos cantando Belchior com tanta convicção nas palavras que eu pensei que ele viveu aquilo. Foi lindo.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+        </div>
+      </div>
+      <!-- End testimonial item -->
+      <div class="swiper-slide">
+        <div class="testimonial-item">
+          <img src="{% static 'img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+          <h3>Ana Camila</h3>
+          <h4>Sete Lagoas-MG</h4>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Passei um final de semana na casa do meu love e ele me levou para este mix de botequim antigo, design rústico e moderno. Voltei umas 10 vezes. 
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+        </div>
+      </div><!-- End testimonial item -->
+      <div class="swiper-slide">
+        <div class="testimonial-item">
+          <img src="{% static 'img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+          <h3>Cássia Almeida</h3>
+          <h4>Londrina-PR</h4>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Não sei dizer direito, mas esse lugar é mágico. Tomei cachaça com minhas amigas e não passei mal.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+        </div>
+      </div><!-- End testimonial item -->
+      <div class="swiper-slide">
+        <div class="testimonial-item">
+          <img src="{% static 'img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+          <h3>João Augusto</h3>
+          <h4>Goiânia-GO</h4>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Estive em Minas Gerais muitas vezes, e confesso que esse foi o melhor bar que conheci.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+        </div>
+      </div><!-- End testimonial item -->
+      <div class="swiper-slide">
+        <div class="testimonial-item">
+          <img src="{% static 'img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+          <h3>Douglas M. Grugger</h3>
+          <h4>Valdivia-Chile</h4>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Nasci em BH, mas fui estudar e trabalhar em terras chilenas. Toda vez que venho visitar minha mãe, a levo para esse bar.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+        </div>
+      </div><!-- End testimonial item -->
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+</section>
+
+<div class="container">
+  {% if messages%}
+    {%  for m in messages%}
+      <div class="alert alert-{{m.tags}}">
+        <button type="button" class="close" data-dismiss="alert"></button>
+        <strong>{{m}}</strong>
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>
