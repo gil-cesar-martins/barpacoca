@@ -1,0 +1,1 @@
+web: gunicorn barpacoca.wsgi --log-file -
