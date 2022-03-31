@@ -84,8 +84,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME' : 'barpacoca',
-        'USER': 'bilu',
-        'PASSWORD': 'V1v@2022',
+        'USER': '<nome_do_usuario>',  # Digite o nome d usuário do banco de dados
+        'PASSWORD': '<senha>',        # Digite a senha
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -155,3 +155,16 @@ DEFAULT_FROM_EMAIL = 'pacoca@reservas.com'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGOUT_REDIRECT_URL = 'index' 
+
+# Recursos Extras de Segurança do Django
+SECURE_HSTS_SECONDS = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = True
+X_FRAME_OPTIONS = 'DENY'
+
+#QANDO ESTIVER EM AMBIENTE DE DESENVOLVIMENTO LOCAL, ESTE RECURSO ABAIXO DEVE PSER COMENTADO COM UM #
+SECURE_SSL_REDIRECT = True
