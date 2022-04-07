@@ -34,7 +34,10 @@ E depois migrar os **models** para o banco de dados:
 Crie um superusuário para o gerenciamento do banco de dados:
  
 `python manage.py createsuperuser`
- 
+
+Quando estiver no ambite de desenvolvimento local ,comente essa última linha em settings.py com um #, deixando-a assim:
+`#SECURE_SSL_REDIRECT = True`
+
 Execute sua aplicação:
  
 `python manage.py runserver`
