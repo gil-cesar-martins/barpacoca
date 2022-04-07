@@ -1,13 +1,3 @@
-/**
-* Template Name: Delicious - v4.7.1
-* Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Poppins", sans-serif;
   color: #444444;
@@ -30,6 +20,49 @@ h4,
 h5,
 h6 {
   font-family: "Satisfy", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+}
+
+.section-bg {
+  background-color: white;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  margin: 15px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #5f5950;
+}
+
+.section-title h2 span {
+  color: #ffb03b;
+}
+
+.section-title p {
+  margin: 15px auto 0 auto;
+  font-weight: 300;
+}
+@media(max-width: 576px) {
+  .section {
+    padding: 30px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title p {
+    width: 50%;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -568,44 +601,6 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Sections General
---------------------------------------------------------------*/
-section {
-  padding: 60px 0;
-}
-
-.section-bg {
-  background-color: white;
-}
-
-.section-title {
-  text-align: center;
-  padding-bottom: 30px;
-}
-
-.section-title h2 {
-  margin: 15px 0 0 0;
-  font-size: 32px;
-  font-weight: 700;
-  color: #5f5950;
-}
-
-.section-title h2 span {
-  color: #ffb03b;
-}
-
-.section-title p {
-  margin: 15px auto 0 auto;
-  font-weight: 300;
-}
-
-@media (min-width: 1024px) {
-  .section-title p {
-    width: 50%;
-  }
-}
-
-/*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
@@ -805,14 +800,22 @@ section {
   border-radius: 0;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 576px) {
   .about .content {
     margin-left: 5%;
     margin-right: 5%;
   }
-
   .about .content h3 {
     font-size: 18px;
+    text-align: center;
+  }
+  .about .content p {
+    font-size: 14px;
+    color: #433f39;
+    text-align: justify;
+  }
+  .about .content ul li {
+    font-size: 14px;
   }
 }
 
@@ -861,7 +864,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Whu Us
+# Why Us
 --------------------------------------------------------------*/
 .why-us .box {
   padding: 50px 30px;
@@ -906,11 +909,17 @@ section {
   color: #fff;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 576px) {
+  .why-us .section-title p{
+    font-size: 12px;
+    text-align: center;
+  }
+  .why-us .box {
+    padding: 25px 30px;
+  }
   .why-us .box p {
     color: #433f39;
-    ;
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
     padding: 0;
     text-align: justify;
@@ -1048,19 +1057,7 @@ section {
   margin-bottom: 0;
 }
 
-@media (max-width: 992px) {
-  .specials .nav-link {
-    border: 0;
-    padding: 15px;
-  }
-
-  .specials .nav-link.active {
-    color: #fff;
-    background: #ffb03b;
-  }
-}
-
-@media (max-width: 425px) {
+@media (max-width: 576px) {
   h3 {
     margin-top: 15px;
     margin-left: 5%;
@@ -1074,6 +1071,18 @@ section {
   .specials .details p {
     margin-left: 5%;
     margin-right: 5%;
+  }
+}
+
+@media (max-width: 992px) {
+  .specials .nav-link {
+    border: 0;
+    padding: 15px;
+  }
+
+  .specials .nav-link.active {
+    color: #fff;
+    background: #ffb03b;
   }
 }
 
@@ -1102,12 +1111,6 @@ section {
 
 .events .container {
   position: relative;
-}
-
-@media (min-width: 1024px) {
-  .events {
-    background-attachment: fixed;
-  }
 }
 
 .events .events-carousel {
@@ -1171,110 +1174,38 @@ section {
   background-color: #ffb03b;
 }
 
-@media(max-width: 425px) {
+@media(max-width: 576px) {
   li {
     text-align: justify;
     margin-left: 5%;
     margin-right: 5%;
   }
-
-  p {
+  .events .event-item ul li {
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+  .price p{
+    font-size: 24px;
+    padding-left: 5%;
+  }
+  
+  #events .fst-italic {
+    padding: 0 5% 0 5%;
     text-align: justify;
-    margin-left: 5%;
-    margin-right: 5%;
+    font-size: 14px;
+  }
+  p{
+    hyphens: auto;
+    text-align: justify;
+    font-size: 14px;
+    padding: 0 5% 0 5%;
   }
 }
 
-/*--------------------------------------------------------------
-# Book A Table
---------------------------------------------------------------*/
-.book-a-table .php-email-form {
-  width: 100%;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-  padding: 30px;
-  background: #fff;
-}
-
-.book-a-table .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.book-a-table .php-email-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.book-a-table .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.book-a-table .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.book-a-table .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.book-a-table .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.book-a-table .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-.book-a-table .php-email-form input,
-.book-a-table .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.book-a-table .php-email-form input {
-  height: 44px;
-}
-
-.book-a-table .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.book-a-table .php-email-form button[type=submit] {
-  background: #ffb03b;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.book-a-table .php-email-form button[type=submit]:hover {
-  background: #ffa012;
+@media (min-width: 1024px) {
+  .events {
+    background-attachment: fixed;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1298,16 +1229,13 @@ section {
   transform: scale(1.1);
 }
 
-@media(max-width: 425px) {
+@media(max-width: 576px) {
   .section-title h2 {
     font-size: 26px;
   }
-
   .section-title p {
-    margin-left: 5%;
-    margin-right: 5%;
+    padding: 0 5% 0 5%;
   }
-
   #gallery .col-md-4 {
     width: 50%;
   }
@@ -1407,9 +1335,11 @@ section {
   margin: 0 2px;
 }
 
-@media(max-width: 425px) {
+@media(max-width: 576px) {
   #chefs .section-title p {
-    font-size: 18px;
+    font-size: 14px;
+    text-align: justify;
+    padding: 0;
   }
 }
 
@@ -1424,7 +1354,6 @@ section {
     background-attachment: fixed;
   }
 }
-
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -1529,7 +1458,7 @@ section {
   background-color: #ffb03b;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 576px) {
   .testimonials .testimonial-item .quote-icon-left {
     margin-left: 5%;
   }
@@ -1655,7 +1584,7 @@ section {
   }
 }
 
-@media(max-width: 425px) {
+@media(max-width: 576px) {
   .contact .info-wrap {
     margin-bottom: 15px;
   }
@@ -1663,6 +1592,11 @@ section {
   .contact .form-group {
     padding-bottom: 0px;
     margin-bottom: 1px;
+  }
+
+  #contact .section-title p {
+    font-size: 14px;
+    padding: 0 0 5px;
   }
 }
 
@@ -1725,7 +1659,7 @@ section {
   font-size: 13px;
 }
 
-@media(max-width: 425px) {
+@media(max-width: 576px) {
   #footer p {
     margin-top: 25px;
   }

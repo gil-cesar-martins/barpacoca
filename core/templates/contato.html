@@ -3,7 +3,8 @@
   <div class="container">
     <div class="section-title">
       <h2><span>Entre em </span>contato</h2>
-      <p>Será um prazer receber você,seus amigos e familiares. Venha e traga-os para tomar umas, ficar à vontade e aproveitar bons momentos!</p>
+      <p>Será um prazer receber você, seus amigos e familiares. Venha e traga-os para tomar umas, ficar à vontade e
+        aproveitar bons momentos!</p>
     </div>
   </div>
   <div class="container mt-5">
@@ -12,7 +13,7 @@
         <div class="col-lg-3 col-md-6 info">
           <i class="bi bi-geo-alt"></i>
           <h4>Localização:</h4>
-          <p>Rua 14 BIS, 215<br>Belo Horizonte, MG 535022</p>
+          <p>Rua 14 BIS, 215<br>Belo Horizonte/MG</p>
         </div>
         <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
           <i class="bi bi-clock"></i>
@@ -34,10 +35,10 @@
     <form id="contato" method="post" action="{% url 'index' %}" autocomplete="off">
       {% csrf_token %}
       <div class="row">
-        <div class="col-md-6 form-group">
+        <div class="col-sm-12 col-md-6 form-group">
           <input type="text" name="nome" class="form-control" id="nome" placeholder="Seu Nome" required>
         </div>
-        <div class="col-md-6 form-group mt-3 mt-md-0">
+        <div class="col-sm-12 col-md-6 form-group mt-3 mt-sm-0">
           <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email" required>
         </div>
       </div>
@@ -47,7 +48,7 @@
       <div class="form-group mt-3">
         <textarea class="form-control" name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
       </div>
-      <div class="text-center"><button  type="submit">Enviar e-mail</button></div>
+      <div class="text-center"><button type="submit">Enviar e-mail</button></div>
     </form>
   </div>
 </section>
